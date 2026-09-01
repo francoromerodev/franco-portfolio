@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Franco Romero — Software Engineer</title>
+    <meta name="description" content="Franco Romero — Software Engineer. Full-stack platform engineering and Flutter mobile development, based in Córdoba, Argentina." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <nav class="nav">
+        <a href="#top" class="nav__mark">FR</a>
+        <ul class="nav__links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero__inner">
+          <p class="eyebrow">Software Engineer — Córdoba, Argentina</p>
+          <h1 class="hero__title">
+            I build the parts of a product that have<br />
+            to be <em>correct</em>, not just <em>done</em>.
+          </h1>
+          <p class="hero__lede">
+            Full-stack platform engineering and financial systems, with a background in
+            cross-platform mobile development. I care most about the unglamorous work —
+            data integrity, shared calculation logic, atomic transactions — that decides
+            whether a product can be trusted once real money or real users depend on it.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#work">See recent work</a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/franco-ezequiel-romero-2635593b5/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+        <div class="hero__meta">
+          <div class="hero__meta-row">
+            <span class="mono">01</span>
+            <span>Full-stack &amp; platform engineering</span>
+          </div>
+          <div class="hero__meta-row">
+            <span class="mono">02</span>
+            <span>Flutter · iOS &amp; Android</span>
+          </div>
+          <div class="hero__meta-row">
+            <span class="mono">03</span>
+            <span>Financial &amp; payments systems</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section">
+        <div class="section__head">
+          <p class="eyebrow">Selected work</p>
+          <h2>Two very different kinds of software.</h2>
+        </div>
+
+        <article class="project reveal">
+          <div class="project__index mono">01</div>
+          <div class="project__body">
+            <p class="project__tag mono">Full-stack platform · Next.js, PostgreSQL, Stripe</p>
+            <h3>Rebuilding an affiliate marketing platform on real financial rails</h3>
+            <p>
+              Led a ground-up rebuild of a two-app affiliate marketing platform for a
+              sports betting / iGaming business — an internal admin console and a
+              partner-facing portal, both reading from one shared source of truth.
+            </p>
+            <ul class="project__points">
+              <li>
+                Migrated the system off a fragile, spreadsheet-backed data layer onto
+                PostgreSQL, closing real security gaps (hardcoded credentials, missing
+                authentication) in the process.
+              </li>
+              <li>
+                Designed a canonical financial calculation kernel shared by both apps, so
+                margin and earnings math can never silently drift between what staff sees
+                and what a partner sees.
+              </li>
+              <li>
+                Shipped a live Stripe Connect payout workflow — performance entry, period
+                close, approval, and real bank transfers — then built self-service
+                onboarding so partners connect their own Stripe account directly, no
+                staff hand-off required.
+              </li>
+              <li>
+                Rebuilt partner-facing account management, brand requests, and real-time
+                performance reporting end to end.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__index mono">02</div>
+          <div class="project__body">
+            <p class="project__tag mono">Mobile · Flutter, iOS &amp; Android</p>
+            <h3>Cross-platform mobile applications, concept to production</h3>
+            <p>
+              Two years building and maintaining cross-platform mobile applications in
+              Flutter — responsible for scalable, high-quality mobile solutions from
+              concept through production, with a focus on performance, reliability, and
+              a seamless user experience.
+            </p>
+            <ul class="project__points">
+              <li>
+                Designed and implemented responsive UI components, integrated RESTful
+                APIs and third-party services, and applied clean architecture principles
+                to keep codebases well-structured and testable.
+              </li>
+              <li>
+                Worked regularly with state management solutions — Provider, Riverpod,
+                and Bloc — to handle complex application logic.
+              </li>
+              <li>
+                Collaborated closely with product managers, designers, and backend
+                engineers in agile environments to ship features, troubleshoot
+                production issues, and continuously improve app performance.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="about" class="section section--about">
+        <div class="section__head">
+          <p class="eyebrow">About</p>
+          <h2>How I actually work.</h2>
+        </div>
+        <div class="about__grid">
+          <p class="about__lede">
+            I move between mobile and full-stack platform work, but the throughline is
+            the same: I'd rather spend an extra day on data integrity and a shared
+            source of truth than ship something that's "probably correct." When a
+            product touches real payouts, real user accounts, or real production data,
+            that difference is the whole job.
+          </p>
+          <p>
+            Most recently that's meant rebuilding a financial platform's backbone —
+            input validation, atomic transactions, a canonical calculation model shared
+            across two apps — and shipping it alongside the visible features partners
+            actually use. Before that, two years in Flutter taught me to care just as
+            much about what a user experiences in the moment: responsive UI, clean
+            architecture, and the kind of state management that doesn't fall over under
+            real usage.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section__head">
+          <p class="eyebrow">Skills</p>
+          <h2>Toolbox.</h2>
+        </div>
+        <div class="skills">
+          <div class="skills__group">
+            <h3 class="mono">Platform &amp; Backend</h3>
+            <ul>
+              <li>TypeScript</li>
+              <li>Next.js / React</li>
+              <li>PostgreSQL &amp; Prisma</li>
+              <li>Stripe Connect &amp; payments</li>
+              <li>REST API design</li>
+              <li>Auth &amp; access control</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3 class="mono">Mobile</h3>
+            <ul>
+              <li>Flutter / Dart</li>
+              <li>iOS &amp; Android</li>
+              <li>Provider / Riverpod / Bloc</li>
+              <li>Clean architecture</li>
+              <li>Third-party SDK integration</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3 class="mono">Practice</h3>
+            <ul>
+              <li>Data integrity &amp; validation</li>
+              <li>Atomic transactions</li>
+              <li>Financial / canonical data models</li>
+              <li>Agile collaboration</li>
+              <li>Production troubleshooting</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section--contact">
+        <div class="contact__inner">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Let's build something that has to be right.</h2>
+          <p class="contact__lede">
+            Based in Córdoba, Argentina. Open to conversations about full-stack,
+            platform, and mobile engineering work.
+          </p>
+          <a class="btn btn--primary" href="https://www.linkedin.com/in/franco-ezequiel-romero-2635593b5/" target="_blank" rel="noopener">
+            Connect on LinkedIn ↗
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Franco Romero — Córdoba, Argentina</p>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
