@@ -475,8 +475,25 @@ main {
   color: var(--text-muted);
 }
 
-.contact__inner .btn {
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
   margin-top: 12px;
+}
+
+.contact__email {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact__email:hover {
+  color: var(--accent-text);
+  border-bottom-color: var(--accent);
 }
 
 /* ---------------------------------------------------------------------- */
