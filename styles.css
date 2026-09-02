@@ -524,3 +524,57 @@ main {
   opacity: 1;
   transform: none;
 }
+
+/* ---------------------------------------------------------------------- */
+/* Small screens                                                           */
+/* ---------------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  /* The nav links are a flex row that never wraps, so at phone widths they
+     pushed the document wider than the viewport and clipped every section.
+     Tightening the gap and type lets all four fit without a menu. */
+  .nav {
+    padding: 14px 20px;
+    gap: 16px;
+  }
+
+  .nav__links {
+    gap: 16px;
+  }
+
+  .nav__links a {
+    font-size: 0.82rem;
+  }
+
+  .nav__mark {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+
+  .hero {
+    padding: 96px 20px 72px;
+    gap: 48px;
+  }
+
+  .section {
+    padding: 72px 20px;
+  }
+
+  .section__head {
+    margin-bottom: 40px;
+  }
+
+  .site-footer {
+    padding: 24px 20px 40px;
+  }
+
+  .hero__lede,
+  .about__lede {
+    font-size: 1rem;
+  }
+
+  .hero__actions .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}
