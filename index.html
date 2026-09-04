@@ -139,28 +139,36 @@
         <article class="project reveal">
           <div class="project__index mono">02</div>
           <div class="project__body">
-            <p class="project__tag mono">Mobile · Flutter, iOS &amp; Android</p>
-            <h3>Cross-platform mobile applications, concept to production</h3>
+            <p class="project__tag mono">Mobile · Flutter, Supabase, iOS &amp; Android</p>
+            <h3>Happy Camper — a campsite discovery product, from schema to paywall</h3>
             <p>
-              Two years building and maintaining cross-platform mobile applications in
-              Flutter — responsible for scalable, high-quality mobile solutions from
-              concept through production, with a focus on performance, reliability, and
-              a seamless user experience.
+              Built a Flutter application for discovering and exploring campsites across
+              Argentina, on contract for a client. I owned the whole vertical slice: the
+              database and its migrations, the domain model, the map, and the paid tier
+              on top of it.
             </p>
             <ul class="project__points">
               <li>
-                Designed and implemented responsive UI components, integrated RESTful
-                APIs and third-party services, and applied clean architecture principles
-                to keep codebases well-structured and testable.
+                Structured the app on a strict clean-architecture split — domain, data and
+                feature layers — with dependency injection and Bloc for state, so the
+                business rules never depend on Flutter or on Supabase.
               </li>
               <li>
-                Worked regularly with state management solutions — Provider, Riverpod,
-                and Bloc — to handle complex application logic.
+                Designed the Supabase backend across three migrations, one of them a
+                dedicated security pass that tightened access rules on the initial model
+                rather than leaving them to be discovered later.
               </li>
               <li>
-                Collaborated closely with product managers, designers, and backend
-                engineers in agile environments to ship features, troubleshoot
-                production issues, and continuously improve app performance.
+                Built an interactive map over the full campsite catalogue with clustered
+                markers, backed by a normalisation layer for inconsistent source data and
+                local caching so the app stays useful with no signal — which is exactly
+                where you are when you're looking for a campsite.
+              </li>
+              <li>
+                Shipped the parts that make it a product rather than a demo: B2C
+                subscriptions and a paywall, a recommendation engine, a gamification layer
+                of ranks and photo-based rewards, and full Spanish and English
+                localisation.
               </li>
             </ul>
           </div>
