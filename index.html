@@ -100,11 +100,60 @@
       <section id="work" class="section">
         <div class="section__head">
           <p class="eyebrow">Selected work</p>
-          <h2>Two very different kinds of software.</h2>
+          <h2>Three very different kinds of software.</h2>
         </div>
 
         <article class="project reveal">
           <div class="project__index mono">01</div>
+          <div class="project__body">
+            <p class="project__tag mono">Backend &amp; platform · Supabase, Mercado Pago, React Native, Next.js</p>
+            <h3>A subscription streaming app where the server owns money, access and points</h3>
+            <p>
+              Backend and infrastructure owner for a dance and fitness streaming app on
+              iOS, Android and the web, built at JRC Studio. A React Native app and a
+              Next.js site on top of Supabase, with Sanity for content, Mux for video and
+              Mercado Pago for recurring billing. The rule I held from the first
+              migration: the client never decides anything that touches money, access or
+              points.
+            </p>
+            <ul class="project__points">
+              <li>
+                Designed the data model with row-level security on every table, explicit
+                column grants and deny-by-default. Payments, access and points are written
+                only by locked-down database functions and server-side Edge Functions,
+                never by the app.
+              </li>
+              <li>
+                Built recurring billing on Mercado Pago end to end: card and account
+                checkout, monthly and annual plans, a 3-day free trial on both payment
+                paths, and a signed, idempotent webhook driving the subscription state
+                machine. Cancelled members keep access until the period they paid for
+                ends.
+              </li>
+              <li>
+                Added a daily reconciliation job that re-reads every live subscription from
+                Mercado Pago and repairs the database, because providers lose
+                notifications. It also recovers a trial that started but never got its
+                confirmation.
+              </li>
+              <li>
+                Built server-side points and rewards under anti-abuse rules, with atomic
+                redemptions and locks proven by concurrency tests: eight simultaneous
+                completions produce exactly one ledger entry. Progress, history and active
+                days are computed in the database, not on the phone.
+              </li>
+              <li>
+                Stood up production from zero: separate environments, real transactional
+                email for password recovery verified on a device, and CI that applies every
+                migration to a clean database and runs 147 database tests and 320+ function
+                tests on each pull request.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__index mono">02</div>
           <div class="project__body">
             <p class="project__tag mono">Full-stack platform · Next.js, PostgreSQL, Stripe</p>
             <h3>Rebuilding an affiliate marketing platform on real financial rails</h3>
@@ -139,7 +188,7 @@
         </article>
 
         <article class="project reveal">
-          <div class="project__index mono">02</div>
+          <div class="project__index mono">03</div>
           <div class="project__body">
             <p class="project__tag mono">Mobile · Flutter, Supabase, iOS &amp; Android</p>
             <h3>Happy Camper — a campsite discovery product, from schema to paywall</h3>
@@ -191,10 +240,11 @@
             that difference is the whole job.
           </p>
           <p>
-            Most recently that's meant rebuilding a financial platform's backbone —
-            input validation, atomic transactions, a canonical calculation model shared
-            across two apps — and shipping it alongside the visible features partners
-            actually use. Building in Flutter taught me to care just as
+            Most recently that's meant owning the backend of a subscription product —
+            billing that survives lost provider notifications, access rules enforced in
+            the database, every change shipped as a tested migration — and, before that,
+            rebuilding a financial platform's backbone around a canonical calculation
+            model shared across two apps. Building in Flutter taught me to care just as
             much about what a user experiences in the moment: responsive UI, clean
             architecture, and the kind of state management that doesn't fall over under
             real usage.
@@ -214,7 +264,8 @@
               <li>TypeScript</li>
               <li>Next.js / React</li>
               <li>PostgreSQL &amp; Prisma</li>
-              <li>Stripe Connect &amp; payments</li>
+              <li>Supabase: RLS, Edge Functions, pg_cron</li>
+              <li>Stripe Connect &amp; Mercado Pago subscriptions</li>
               <li>REST API design</li>
               <li>Auth &amp; access control</li>
             </ul>
@@ -235,6 +286,8 @@
               <li>Data integrity &amp; validation</li>
               <li>Atomic transactions</li>
               <li>Financial / canonical data models</li>
+              <li>Payment webhooks &amp; reconciliation</li>
+              <li>Test-first migrations (pgTAP)</li>
               <li>Agile collaboration</li>
               <li>Production troubleshooting</li>
             </ul>
